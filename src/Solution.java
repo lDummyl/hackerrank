@@ -1,24 +1,35 @@
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 import static java.util.stream.Collectors.toList;
 
 public class Solution {
 
     // Complete the matrixRotation function below.
     static void matrixRotation(List<List<Integer>> matrix, int r) {
-
         for (int i = 0; i < r; i++) {
+            for (int col = 0; col < 4; col++) {
+                for (int row = 0; row < 4; row++) {
+                    if (row == 0 || row == 4) {
 
+                    }
+
+                }
+            }
         }
         matrix.forEach(System.out::println);
+    }
+
+    private static void switchPlaces(List<List<Integer>> matrix, int x1, int y1, int x2, int y2) {
+        Integer first = matrix.get(x1).get(y1);
+        Integer second = matrix.get(x2).get(y2);
+        matrix.get(x1).set(y1, second);
+        matrix.get(x2).set(y2, first);
     }
 
     public static void main(String[] args) throws IOException {
